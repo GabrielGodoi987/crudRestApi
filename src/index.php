@@ -10,9 +10,16 @@ use Backend\Firstapi\Routes\Routes;
 // Controllers
 $user = new UserController();
 
-// Define as rotas
-Routes::get('/', function() use ($user) {
-    echo $user->createUser('GET');
+// ROTA PARA FAZER LOGIN DE USUARIOS
+//ROTA PARA LISTAR TODOS OS USUÁRIOS
+
+// ROTA PARA CRIAR USUÁRIOS
+Routes::post('/', function() use ($user) {
+    echo $user->createUser('POST');
 });
+
+// ROTA PARA ATUALIZAR USUÁRIOS
+
+// ROTA PARA DELETAR USUÁRIOS
 
 Routes::resolve();

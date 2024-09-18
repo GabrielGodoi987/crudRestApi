@@ -22,7 +22,7 @@ class UserController
 
     public function createUser($allowedMethod)
     {
-        if ($allowedMethod === "GET") {
+        if ($allowedMethod === "POST") {
             http_response_code(200);
             echo $this->user->createUser();
         } else {
