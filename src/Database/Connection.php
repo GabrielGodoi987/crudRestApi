@@ -40,7 +40,9 @@ class Connection
         try {
             $dsn = "mysql:host={$this->host};dbname={$this->db_name}";
             new PDO($dsn, $this->user, $this->password) . exec("set names utf8");
+            var_dump("Trabalhando normalmente");
         } catch (PDOException $e) {
+            var_dump($e->getMessage());
             echo json_encode(
                 [
                     "msg" => "erro ao se conectar com banco de dados",
